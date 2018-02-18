@@ -12,8 +12,8 @@ services:
       restart_policy:
         condition: on-failure
       labels:
-        - traefik.port=1313
-        - traefik.frontend.rule=Host:ea.cloud.smals.be
+        - traefik.port=80
+        - traefik.frontend.rule=Host:pa.services.alin.be
         - traefik.frontend.entryPoints=http,https
         - traefik.backend.loadbalancer.method=wrr
 

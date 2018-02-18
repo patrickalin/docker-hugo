@@ -18,6 +18,9 @@ fi
 case "$OPTION" in
 
 1)  cd $IMAGE
+    cd src
+    ./build.sh
+    cd ..
     docker build -t $IMAGE .
     ;;
 2)  docker stack remove  $SERVICE
