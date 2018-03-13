@@ -3,16 +3,80 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>/monitoring/alert/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>/monitoring/cadvisor/</loc>
+  </url>
+  
+  <url>
+    <loc>/container/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/</loc>
+  </url>
+  
+  <url>
+    <loc>/monitoring/grafana/</loc>
+  </url>
+  
+  <url>
+    <loc>/monitoring/</loc>
+  </url>
+  
+  <url>
+    <loc>/monitoring/prometheus/</loc>
+  </url>
+  
+  <url>
+    <loc>/rp/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/hugo/</loc>
+  </url>
+  
+  <url>
+    <loc>/container/portainer/</loc>
+  </url>
+  
+  <url>
+    <loc>/container/registry/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/shiori/</loc>
+  </url>
+  
+  <url>
+    <loc>/rp/traefik/</loc>
+  </url>
+  
+  <url>
+    <loc>/_footer/</loc>
+  </url>
+  
+  <url>
+    <loc>/homeassistant/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>/credits/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   

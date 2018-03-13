@@ -1,14 +1,143 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Patrick Alin site on Patrick Alin Site</title>
+    <link>/</link>
+    <description>Recent content in Patrick Alin site on Patrick Alin Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Alert</title>
+      <link>/monitoring/alert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/alert/</guid>
+      <description> Alertmanager / blackbox  Alerting  Lien alertmanager Alertmanager 
+Lien blackbox Blackbox 
+Run cd /opt/docker-prometheus/menu.sh  build deploy  </description>
+    </item>
+    
+    <item>
+      <title>Cadvisor</title>
+      <link>/monitoring/cadvisor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/cadvisor/</guid>
+      <description> Récolte les métriques des containeurs.
+Lien Portainer Cadvisor 
+Run / Github  Github
+git clone https://github.com/patrickalin/docker-cadvisor.gitcd /opt/docker-cadvisor/menu.sh  build deploy  Image google/cadvisor
+ Insert localtime pour avoir le container avec la bonne date L&amp;rsquo;authentification est déjà dans l&amp;rsquo;application : par l&amp;rsquo;entrypoint et le fichier htpasswd Le healtcheck fonctionne  Docker-compose  /:/rootfs:ro /var/run:/var/run:rw /sys:/sys:ro /var/lib/docker/:/var/lib/docker:ro /dev/disk/:/dev/disk:ro  </description>
+    </item>
+    
+    <item>
+      <title>Grafana</title>
+      <link>/monitoring/grafana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/grafana/</guid>
+      <description>Lien grafana Grafana 
+Grafana : Visualisation TSDB count(rate(container_last_seen{name=~&amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>Prometheus</title>
+      <link>/monitoring/prometheus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/prometheus/</guid>
+      <description> Prometheus : Time Series Database Centralisation des metrics dans une time serie database :
+ machine viruelle ou physique container docker FN server  Lien prometheus Prometheus
+Lien cadvisor Cadvisor 
+Lien Node exporter Node exporter 
+Run /opt/docker-prometheus/menu.sh  build deploy  </description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/documentation/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/hugo/</guid>
+      <description> Lien Hugo Ce site 
+Github  Github
+Source Edit :
+vim /opt/docker-hugo/hugo-image/src/content/documentation/hugo.md Run dev mode /opt/docker-hugo/hugo-image/src/run.sh Run prod mode /opt/docker-hugo/menu.sh  build deploy  </description>
+    </item>
+    
+    <item>
+      <title>Portainer</title>
+      <link>/container/portainer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/container/portainer/</guid>
+      <description>GUI pour géer les containeurs
+Lien Portainer Portainer 
+Run / Github  Github
+git clone https://github.com/patrickalin/docker-portainer.gitcd /opt/docker-portainer/menu.sh  build deploy  Image portainer/portainer
+ Insert localtime pour avoir le container avec la bonne date L&amp;rsquo;authentification est déjà dans l&amp;rsquo;application (ils n&amp;rsquo;ont pas prévu de reset password, il faut supprimer la DB) Impossible d&amp;rsquo;activer le health check c&amp;rsquo;est une demande https://github.com/portainer/portainer/issues/1364  Docker-compose  le sock docker est monté la DB est montée (obligé de la supprimer si on a perdu le password)  Docker Swarm Si on veut se connecter à un autre serveur, il faut ouvrir l&amp;rsquo;API de docker à la place du socket, pour ubuntu :</description>
+    </item>
+    
+    <item>
+      <title>Registry</title>
+      <link>/container/registry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/container/registry/</guid>
+      <description> Lien Registry Registry Docker is registry.services.alin.be:80
+Registry 
+Github  Github
+Tag / push vim /etc/docker/daemon.json  { &amp;#34;metrics-addr&amp;#34; : &amp;#34;0.0.0.0:9323&amp;#34;, &amp;#34;experimental&amp;#34; : true, &amp;#34;insecure-registries&amp;#34; : [&amp;#34;registry.services.alin.be&amp;#34;,&amp;#34;morpheus.alin.be:5000&amp;#34;,&amp;#34;192.168.10.11:5000&amp;#34;], &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://registry.services.alin.be&amp;#34;] } Lien Registy-ui Registry UI 
+Registry UI2 
+Run cd /opt/docker-registry/menu.sh   build deploy  </description>
+    </item>
+    
+    <item>
+      <title>Shiori</title>
+      <link>/documentation/shiori/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/shiori/</guid>
+      <description> Pour sauver vos bookmarks
+Lien Shiori Shiori 
+Run / Github  Github
+git clone https://github.com/patrickalin/docker-shiori.gitcd /opt/docker-portainer/menu.sh  build deploy  Image portainer/portainer
+ Insert localtime pour avoir le container avec la bonne date L&amp;rsquo;authentification est déjà dans l&amp;rsquo;application Health check  Docker-compose  la DB est montée  </description>
+    </item>
+    
+    <item>
+      <title>Traefik</title>
+      <link>/rp/traefik/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rp/traefik/</guid>
+      <description> Lien Traefik Dashboard Traefik dashboard
+Lien Traefik Ping Traefik ping
+Github  Github
+Run cd /opt/docker-traefik/run.sh  build deploy  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/_footer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/_footer/</guid>
+      <description>Patrick Alin</description>
+    </item>
+    
+    <item>
+      <title>Credits</title>
+      <link>/credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/credits/</guid>
+      <description>Other contribution  @patrickalin   Site Web Patrick Alin</description>
+    </item>
     
   </channel>
 </rss>

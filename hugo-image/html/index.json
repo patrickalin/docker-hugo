@@ -1,0 +1,134 @@
+[
+{
+	"uri": "/monitoring/alert/",
+	"title": "Alert",
+	"tags": [],
+	"description": "Alert on metrics",
+	"content": " Alertmanager / blackbox  Alerting  Lien alertmanager Alertmanager \nLien blackbox Blackbox \nRun cd /opt/docker-prometheus/menu.sh  build deploy  "
+},
+{
+	"uri": "/monitoring/cadvisor/",
+	"title": "Cadvisor",
+	"tags": [],
+	"description": "Collecteur des metrics des containeurs",
+	"content": " Récolte les métriques des containeurs.\nLien Portainer Cadvisor \nRun / Github  Github\ngit clone https://github.com/patrickalin/docker-cadvisor.gitcd /opt/docker-cadvisor/menu.sh  build deploy  Image google/cadvisor\n Insert localtime pour avoir le container avec la bonne date L\u0026rsquo;authentification est déjà dans l\u0026rsquo;application : par l\u0026rsquo;entrypoint et le fichier htpasswd Le healtcheck fonctionne  Docker-compose  /:/rootfs:ro /var/run:/var/run:rw /sys:/sys:ro /var/lib/docker/:/var/lib/docker:ro /dev/disk/:/dev/disk:ro  "
+},
+{
+	"uri": "/container/",
+	"title": "Container",
+	"tags": [],
+	"description": "Technologie Container : Docker, Swarm, K8S, ...",
+	"content": "  Portainer User interface pour Docker\n  Registry Docker registry and UI\n  "
+},
+{
+	"uri": "/documentation/",
+	"title": "Documentation",
+	"tags": [],
+	"description": "Comment générer de la documentation dont ce site avec Hugo",
+	"content": "  Hugo Web Static Generator : ce site\n  Shiori Bookmarks\n  "
+},
+{
+	"uri": "/monitoring/grafana/",
+	"title": "Grafana",
+	"tags": [],
+	"description": "Visualisation des métriques",
+	"content": " Lien grafana Grafana \nGrafana : Visualisation TSDB count(rate(container_last_seen{name=~\u0026#34;.+\u0026#34;}[$interval]))"
+},
+{
+	"uri": "/monitoring/",
+	"title": "Monitoring",
+	"tags": [],
+	"description": "Monitoring : Alertmanager, Cadvisor, Blackbox, Prometheus",
+	"content": " Monitoring  Alert Alert on metrics\n  Cadvisor Collecteur des metrics des containeurs\n  Grafana Visualisation des métriques\n  Prometheus Time Series Database\n  "
+},
+{
+	"uri": "/monitoring/prometheus/",
+	"title": "Prometheus",
+	"tags": [],
+	"description": "Time Series Database",
+	"content": " Prometheus : Time Series Database Centralisation des metrics dans une time serie database :\n machine viruelle ou physique container docker FN server  Lien prometheus Prometheus\nLien cadvisor Cadvisor \nLien Node exporter Node exporter \nRun /opt/docker-prometheus/menu.sh  build deploy  "
+},
+{
+	"uri": "/rp/",
+	"title": "Reverse proxy",
+	"tags": [],
+	"description": "Nginx, Apache, Traefik",
+	"content": " Reverse Proxy  Traefik Reverse proxy\n  "
+},
+{
+	"uri": "/documentation/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "Web Static Generator : ce site",
+	"content": " Lien Hugo Ce site \nGithub  Github\nSource Edit :\nvim /opt/docker-hugo/hugo-image/src/content/documentation/hugo.md Run dev mode /opt/docker-hugo/hugo-image/src/run.sh Run prod mode /opt/docker-hugo/menu.sh  build deploy  "
+},
+{
+	"uri": "/container/portainer/",
+	"title": "Portainer",
+	"tags": [],
+	"description": "User interface pour Docker",
+	"content": " GUI pour géer les containeurs\nLien Portainer Portainer \nRun / Github  Github\ngit clone https://github.com/patrickalin/docker-portainer.gitcd /opt/docker-portainer/menu.sh  build deploy  Image portainer/portainer\n Insert localtime pour avoir le container avec la bonne date L\u0026rsquo;authentification est déjà dans l\u0026rsquo;application (ils n\u0026rsquo;ont pas prévu de reset password, il faut supprimer la DB) Impossible d\u0026rsquo;activer le health check c\u0026rsquo;est une demande https://github.com/portainer/portainer/issues/1364  Docker-compose  le sock docker est monté la DB est montée (obligé de la supprimer si on a perdu le password)  Docker Swarm Si on veut se connecter à un autre serveur, il faut ouvrir l\u0026rsquo;API de docker à la place du socket, pour ubuntu :\nvi /etc/systemd/system/multi-user.target.wants/docker.serviceExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"
+},
+{
+	"uri": "/container/registry/",
+	"title": "Registry",
+	"tags": [],
+	"description": "Docker registry and UI",
+	"content": " Lien Registry Registry Docker is registry.services.alin.be:80\nRegistry \nGithub  Github\nTag / push vim /etc/docker/daemon.json  { \u0026#34;metrics-addr\u0026#34; : \u0026#34;0.0.0.0:9323\u0026#34;, \u0026#34;experimental\u0026#34; : true, \u0026#34;insecure-registries\u0026#34; : [\u0026#34;registry.services.alin.be\u0026#34;,\u0026#34;morpheus.alin.be:5000\u0026#34;,\u0026#34;192.168.10.11:5000\u0026#34;], \u0026#34;registry-mirrors\u0026#34;: [\u0026#34;https://registry.services.alin.be\u0026#34;] } Lien Registy-ui Registry UI \nRegistry UI2 \nRun cd /opt/docker-registry/menu.sh   build deploy  "
+},
+{
+	"uri": "/documentation/shiori/",
+	"title": "Shiori",
+	"tags": [],
+	"description": "Bookmarks",
+	"content": " Pour sauver vos bookmarks\nLien Shiori Shiori \nRun / Github  Github\ngit clone https://github.com/patrickalin/docker-shiori.gitcd /opt/docker-portainer/menu.sh  build deploy  Image portainer/portainer\n Insert localtime pour avoir le container avec la bonne date L\u0026rsquo;authentification est déjà dans l\u0026rsquo;application Health check  Docker-compose  la DB est montée  "
+},
+{
+	"uri": "/rp/traefik/",
+	"title": "Traefik",
+	"tags": [],
+	"description": "Reverse proxy",
+	"content": " Lien Traefik Dashboard Traefik dashboard\nLien Traefik Ping Traefik ping\nGithub  Github\nRun cd /opt/docker-traefik/run.sh  build deploy  "
+},
+{
+	"uri": "/_footer/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Patrick Alin\n"
+},
+{
+	"uri": "/homeassistant/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " ++ title = \u0026ldquo;Create Page\u0026rdquo; description = \u0026ldquo;\u0026rdquo; date = \u0026ldquo;2017-04-24T18:36:24+02:00\u0026rdquo; creatordisplayname = \u0026ldquo;Valere JEANTET\u0026rdquo; creatoremail = \u0026ldquo;valere.jeantet@gmail.com\u0026rdquo; lastmodifierdisplayname = \u0026ldquo;Valere JEANTET\u0026rdquo; lastmodifieremail = \u0026ldquo;valere.jeantet@gmail.com\u0026rdquo; tags = [\u0026ldquo;tag1\u0026rdquo;,\u0026ldquo;tag2\u0026rdquo;] weight = 10 pre =\u0026rdquo; \u0026ldquo; +++\nLinks click below\nTraefik Ping\nTraefik dashboard\nPortainer\nSwarm Visualizer\nMinio\nMinio exporter\nHelloworld\nMicro Serice Hello\n\u0026hellip;\n - https://employer.services.alin.be/metrics - https://file.services.alin.be/ - https://whoami.services.alin.be/ - https://grafana.services.alin.be/login - https://api.services.alin.be/hello - https://api.services.alin.be/employer - https://apidashboard.services.alin.be - https://alertmanager.services.alin.be - https://blackbox.services.alin.be/ - https://documentation.services.alin.be # Reverse proxy test - https://cadvisor.services.alin.be  http://node-exporter.services.alin.be/ http://pa.services.alin.be/ http://prometheus.services.alin.be/graph\n"
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/credits/",
+	"title": "Credits",
+	"tags": [],
+	"description": "Contributors",
+	"content": " Other contribution  @patrickalin   Site Web Patrick Alin  \n"
+},
+{
+	"uri": "/",
+	"title": "Patrick Alin site",
+	"tags": [],
+	"description": "",
+	"content": " Patrick Alin Site Site reprenant l\u0026rsquo;ensemble de ma documentation.  Container Technologie Container : Docker, Swarm, K8S, ...\n  Documentation Comment générer de la documentation dont ce site avec Hugo\n  Monitoring Monitoring : Alertmanager, Cadvisor, Blackbox, Prometheus\n  Reverse proxy Nginx, Apache, Traefik\n   ++ title = \u0026ldquo;Create Page\u0026rdquo; description = \u0026ldquo;\u0026rdquo; date = \u0026ldquo;2017-04-24T18:36:24+02:00\u0026rdquo; creatordisplayname = \u0026ldquo;Valere JEANTET\u0026rdquo; creatoremail = \u0026ldquo;valere.jeantet@gmail.com\u0026rdquo; lastmodifierdisplayname = \u0026ldquo;Valere JEANTET\u0026rdquo; lastmodifieremail = \u0026ldquo;valere.jeantet@gmail.com\u0026rdquo; tags = [\u0026ldquo;tag1\u0026rdquo;,\u0026ldquo;tag2\u0026rdquo;] weight = 10 pre =\u0026rdquo; \u0026ldquo; +++ Links click below Traefik Ping Traefik dashboard Portainer Swarm Visualizer Minio Minio exporter Helloworld Micro Serice Hello \u0026hellip; - https://employer.services.alin.be/metrics - https://file.services.alin.be/ - https://whoami.services.alin.be/ - https://grafana.services.alin.be/login - https://api.services.alin.be/hello - https://api.services.alin.be/employer - https://apidashboard.services.alin.be - https://alertmanager.\n  Links click below\nTraefik Ping\nPortainer\nSwarm Visualizer\nMinio\nMinio exporter\nHelloworld\nMicro Serice Hello\n\u0026hellip;\n - https://employer.services.alin.be/metrics - https://file.services.alin.be/ - https://whoami.services.alin.be/ - https://grafana.services.alin.be/login - https://api.services.alin.be/hello - https://api.services.alin.be/employer - https://apidashboard.services.alin.be - https://alertmanager.services.alin.be - https://blackbox.services.alin.be/ - https://documentation.services.alin.be # Reverse proxy test - https://cadvisor.services.alin.be  http://node-exporter.services.alin.be/ http://pa.services.alin.be/ http://prometheus.services.alin.be/graph\nSite pour concerver ma documentation.\nDocumentation de ma configuration System \nStyle \u0026ldquo;Flex\u0026rdquo; (default)\nStyle \u0026ldquo;Original\u0026rdquo;\nContribute to this documentation Feel free to update this content, just click the Edit this page link displayed on top right of each page, and pullrequest it \u0026lt;div class=\u0026ldquo;alert alert-info\u0026rdquo;\nrole=\u0026ldquo;alert\u0026rdquo;\u0026gt;Your modification will be deployed automatically when merged.\nDocumentation website This current documentation has been statically generated with Hugo with a simple command : hugo -t docdock \u0026ndash; source code is [available here at GitHub\n\n](https://github.com/vjeantet/hugo-theme-docDock)\nAutomated deployments Automatically published and hosted thanks to Netlify.\nRead more about Automated HUGO deployments with Netlify\n Netlify builds, deploys, and hosts frontends.  "
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

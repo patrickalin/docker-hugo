@@ -1,8 +1,8 @@
-version: '3.4'
+version: '3.5'
 
 services:
   documentation:
-    image: hugo-image
+    image: registry.services.alin.be/hugo-image:v1
     deploy:
       replicas: 1
       resources:
@@ -16,6 +16,9 @@ services:
         - traefik.frontend.rule=Host:pa.services.alin.be
         - traefik.frontend.entryPoints=http,https
         - traefik.backend.loadbalancer.method=wrr
+      placement:
+        constraints:
+          - node.role == manager
 
 networks:
   default:
